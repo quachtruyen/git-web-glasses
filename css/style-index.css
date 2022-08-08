@@ -1,0 +1,677 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black-text: #070404;
+    --black-backgound: #030404;
+    --light-blue: rgba(116, 116, 129, 0.1);
+    --while-color: #fff;
+    --blue-color: #03cafc;
+    --grey: #666666;
+    --input-contact-color: rgb(75, 75, 76);
+}
+
+/* common attributes (thuộc tính chung) */
+html {
+    font-family: sans-serif;
+}
+
+
+/* own attributes (thuộc tính riêng) */
+#main {
+    position: relative;
+}
+
+#header {
+}
+
+#header .box-header {
+    padding: 30px;
+    border-top: 11px solid var(--black-text);
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+#header .about-logo {
+    display: inline-block;
+    height: 66px;
+    max-width: 25%;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.about-logo img {
+    margin-top: 14px;
+}
+
+#navigation {
+    float: right;
+    max-width: 75%;
+    border-radius: 38px;
+    background-color: var(--while-color);
+    display: flex;
+    align-items: center;
+    padding: 23px 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#navigation li {
+    display: inline-block;
+}
+
+#navigation .btn-nav a {
+    color: var(--black-text);
+    text-decoration: none;
+    font-weight: 550;
+    padding: 0 16px;
+    font-size: 18px;
+    line-height: 25px;
+    transition: all 0.4s ease-in-out;
+}
+
+.active-nav a {
+    color: var(--blue-color) !important;
+}
+
+#navigation .btn-login a {
+    background-color: #03cafc;
+    color: #fff;
+    margin: 0 10px;
+    font-weight: 550;
+    text-decoration: none;  
+    padding: 10px 32px !important;
+    transition: all 0.4s ease-in-out;
+    border-radius: 20px;
+    /* line-height: 25px; */
+}
+
+#navigation .btn-nav a:hover {
+    color: var(--blue-color);
+}
+
+#navigation .btn-login a:hover {
+    background-color: var(--black-backgound);
+    color: var(--while-color);
+}
+
+#navigation .btn-search i {
+    padding: 0 14px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.box-btn-navMobile {
+    max-width: 75%;
+    display: inline-block;
+    float: right;
+    display: none;
+}
+
+.box-btn-navMobile button {
+    font-size: 30px;
+    background-color: var(--while-color);
+    line-height: 60px;
+    padding-top: 10px;
+}
+
+.active-btn-nav {
+    color: var(--blue-color);
+}
+
+.box-navMobile {
+    display: none;
+    position: absolute;
+    max-width: 360px;
+    width: 100%;
+    top: 110px;
+    right: 20px;
+    background-color: var(--black-backgound);
+    list-style-type: none;
+    padding: 20px 20px;
+}
+
+.box-navMobile .btn-navMobile {
+    height: 40px;
+    line-height: 40px;
+    transition: all ;
+}
+
+.box-navMobile .btn-navMobile a {
+    color: var(--while-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* xử lý giao diện slider */
+#slider {
+    background-color: var(--light-blue);
+    padding-top: 200px;
+}
+
+#slider .carousel {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; */
+}
+
+/* .carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    display: block;
+} */
+
+.carousel-item .box-item {
+    padding-bottom: 90px;
+}
+
+.carousel-item .text-item {
+    text-align: center;
+    font-size: 62px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 45px;
+}
+
+.active-carousel {
+    display: block !important;
+}
+
+.blu-text {
+    color: var(--blue-color);
+    text-transform: none !important;
+}
+
+.carousel-item .img-item {
+    max-width: 100%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.box-btn-read-more{
+    display: flex;
+    justify-content: center;
+    padding-top: 44px;
+}
+
+.box-btn-read-more .btn-read-more {
+    text-decoration: none;
+    color: var(--black-text);
+    width: 222px;
+    height: 66px;
+    font-size: 18px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 66px;
+    cursor: pointer;
+    border: 2px solid var(--black-text);
+    border-radius: 40px;
+    transition: all 0.6s ease-in-out;
+}
+
+.box-btn-read-more .btn-read-more:hover {
+    background-color: var(--blue-color);
+    color: var(--while-color);
+}
+
+.slick-arrow {
+    position: absolute;
+    height: 66px;
+    border-radius: 40px;
+    border: 2px solid var(--black-text);
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.4s ease-in-out; 
+    width: 66px;
+    top: 38%;
+    z-index: 2;
+}
+
+.slick-arrow ion-icon {
+    font-weight: 900;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 20px;
+}
+
+.slick-arrow:hover{
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+
+/* Nội dung Website */
+#content {
+
+}
+
+/* giới thiệu 1 chút về cửa hàng */
+#container-info-shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-shop {
+    padding: 130px 38px 90px 0;
+    display: flex;
+    max-width: 1140px;
+}
+
+.info-shop .box-img-info {
+    padding-right: 15px;
+    max-width: 47%;
+    margin-left: -40px;
+}
+
+.info-shop .box-img-info img{
+    width: 100%;
+    height: auto;
+}
+
+.info-shop .box-content-info {
+    margin-left: 15px;
+    max-width: 53%;
+    margin-right: 56px;
+    position: relative;
+}
+
+.box-content-info .text-info {
+    border: 1px solid var(--black-text);
+    padding: 40px;
+    background-color: var(--while-color);
+}
+
+.box-content-info .text-info h2 {
+    font-size: 35px;
+}
+
+.box-content-info .text-info p {
+    font-size: 18px;
+    line-height: 35px;
+    margin-top: 20px;
+}
+
+.info-shop .btn-info {
+    margin-top: 44px;
+}
+
+.info-shop .btn-info button {
+    border: 2px solid var(--black-text);
+    padding: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 222px;
+    width: 100%;
+    border-radius: 40px;
+    font-weight: 550;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.info-shop .btn-info button:hover {
+    background-color: var(--blue-color);
+    color: var(--while-color);
+}
+
+.box-content-info .backgound-layer {
+    width: 170px;
+    height: 411px;
+    background-color: var(--black-backgound);
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    right: -28px;
+    font-family: sans-serif;
+}
+
+/* Phần danh sách kính mắt */
+#container-list-glasses {
+    border-top: 1px solid var(--black-text);
+}
+
+#container-list-glasses .box-tittle-list {
+    margin: 90px 0 60px 0;
+    text-align: center;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-tittle-list h2 {
+    font-size: 33px;
+}
+
+.box-tittle-list p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 80px;
+    padding-top: 10px;
+    line-height: 30px;
+    color: var(--grey);
+}
+
+.list-glasses .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .col-4 {
+    /* display: inline-block; */
+    width: 25%;
+    padding: 0 15px;
+}
+
+.col-4 .glasses-item {
+    border: 1px solid var(--black-text);
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    text-align: center;
+}
+
+.col-4 .glasses-item img {
+    width: 100%;
+}
+
+.col-4 .glasses-item h3 {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.col-4 .glasses-item p {
+    font-size: 19px;
+}
+
+/* những chiếc kính bán chạy nhất */
+#container-best-seller-glasses{
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+
+#container-best-seller-glasses .box-best-seller {
+    display: flex;
+}
+
+.box-best-seller .box-img-BS {
+    max-width: 43%;
+}
+
+.box-img-BS img {
+    width: 100%;
+    margin-left: 15px;
+    padding-right: 30px;
+}
+
+.box-best-seller .background-content-BS {
+    max-width: 57%;
+    background-color: var(--black-backgound);
+    color: var(--while-color);
+    width: 100%;
+}
+
+.background-content-BS .box-content-BS {
+    max-width: 612px;
+    padding: 85px 0 90px 50px;
+}
+
+.box-content-BS .box-text-BS {
+    
+}
+
+.box-text-BS h3 {
+    width: fit-content;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--while-color);
+    font-size: 33px;
+}
+
+.box-content-BS p {
+    padding: 40px 0 80px 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.background-content-BS .btn-BS{
+    width: 100%;
+}
+
+.btn-BS button {
+    height: 64px;
+    width: 222px;
+    border: 2px solid var(--while-color);
+    font-size: 18px;
+    color: var(--while-color);
+    background-color: var(--black-backgound);
+    border-radius: 40px;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-BS button:hover {
+    background-color: var(--blue-color);
+    color: var(--while-color);
+}
+
+
+/* Phần nhận xét của khách hàng */
+#container-client-reviews {
+    padding: 90px 0 70px 0;
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.box-client-reviews {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.box-tittle-client {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.box-tittle-client h2 {
+    font-size: 36px;
+}
+
+.box-tittle-client p {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.carousel-reviews {
+    width: 100%;
+}
+
+.box-reviews {
+    position: relative;
+    padding: 40px 32px 40px 0;
+    border: 0.5px solid var(--black-backgound);
+    margin-left: 100px;
+    padding-left: 120px;
+    margin-right: 10px;
+    min-height: 254px;
+}
+
+.img-client {
+    position: absolute;
+    left: -100px;
+}
+
+.name-client {
+    padding-top: 23px;
+    font-size: 27px;
+    padding-bottom: 10px;
+}
+
+.text-reviews {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    padding: 0;
+    transform: translateX(-50%);
+    list-style-type: none;
+}
+
+.slick-dots li {
+    display: inline-block !important;
+}
+
+.slick-dots button{
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    border-radius: 10px;
+    background-color: var(--black-backgound);
+    border: none;
+}
+
+.slick-dots .slick-active button {
+    background-color: var(--grey);
+}
+
+
+/* Phần map và thông tin liên lạc của khách hàng */
+#container-contact-clients {
+    padding-top: 90px;
+}
+
+#container-contact-clients .box-contact-clients {
+    position: relative;
+}
+
+.box-contact-clients .box-map {
+    margin: 0 15px;
+}
+
+.box-map iframe {
+    width: 100%;
+    height: 732px;
+}
+
+.box-contact-clients .box-contact {
+    position: absolute;
+    padding: 40px 50px;
+    display: grid;
+    top: 110px;
+    left: 100px;
+    background-color: var(--while-color);
+}
+
+.box-contact h3 {
+    width: 400px;
+    font-size: 27px;
+    text-align: center;
+}
+
+.box-contact input {
+    width: 400px;
+    height: 58px;
+    font-size: 18px;
+    color: var(--input-contact-color);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--input-contact-color);
+}
+
+.box-contact button {
+    width: 400px;
+    height: 50px;
+    background-color: rgb(3, 202, 252);
+    color: var(--while-color);
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.6s ease-in-out;
+    margin-top: 20px;
+}
+
+.box-contact button:hover {
+    background-color: #4b4b4c !important;
+}
+
+
+
+/* Phần chân trang */
+#footer {
+
+}
+
+#footer .container-footer {
+
+}
+
+.container-footer .box-contact-shop {
+    height: 250px;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-contact-shop .contact-icons {
+    color: var(--while-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.contact-icons li {
+    display: grid;
+    text-align: center;
+    margin: 0 40px;
+    font-size: 17px;
+}
+
+.contact-icons li a {
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.contact-icons li i {
+    color: var(--while-color);
+    font-size: 40px;
+}
+
+.container-footer .link-template {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-template p {
+    color: var(--black-text);
+    font-size: 18px;
+}
+
+.link-template p a {
+    color: var(--black-text);
+    text-decoration: none;
+}
+
+.link-template p a:hover {
+    color: var(--blue-color);
+    animation: appearSlowly 0.5s;
+}

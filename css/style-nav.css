@@ -1,0 +1,30 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black-text: #070404;
+    --black-backgound: #030404;
+    --light-blue: rgba(116, 116, 129, 0.1);
+    --while-color: #fff;
+    --blue-color: #03cafc;
+    --grey: #666666;
+    --input-contact-color: rgb(75, 75, 76);
+}
+
+/* common attributes (thuộc tính chung) */
+html {
+    font-family: sans-serif;
+}
+
+#header .box-header {
+    background-color: var(--blue-color);
+    position: relative !important;
+}
+
+#container-list-glasses {
+    padding-bottom: 90px;
+    border-top: none;
+}
