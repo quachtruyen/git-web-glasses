@@ -87,7 +87,6 @@ html {
     padding: 10px 32px !important;
     transition: all 0.4s ease-in-out;
     border-radius: 20px;
-    /* line-height: 25px; */
 }
 
 #navigation .btn-nav a:hover {
@@ -119,26 +118,36 @@ html {
     padding-top: 10px;
 }
 
-.active-btn-nav {
-    color: var(--blue-color);
+.active-btn-nav button {
+    color: var(--blue-color) !important;
 }
 
 .box-navMobile {
-    display: none;
-    position: absolute;
-    max-width: 360px;
+    position: fixed;
+    padding: 0 20px;
+    max-width: 400px;
     width: 100%;
-    top: 110px;
-    right: 20px;
-    background-color: var(--black-backgound);
+    right: 0;
+    opacity: 0;
+    transform: translateX(110%);
     list-style-type: none;
-    padding: 20px 20px;
+    padding: 20px;
+    transition: all ease 0.5s;
+}
+
+.navMobile {
+    background-color: var(--black-backgound);
+    padding: 20px;
+}
+
+.active-box-nav {
+    transform: translateX(0%);
+    opacity: 1;
 }
 
 .box-navMobile .btn-navMobile {
     height: 40px;
     line-height: 40px;
-    transition: all ;
 }
 
 .box-navMobile .btn-navMobile a {
@@ -159,12 +168,6 @@ html {
     justify-content: center;
     width: 100%; */
 }
-
-/* .carousel .carousel-item {
-    position: relative;
-    width: 100%;
-    display: block;
-} */
 
 .carousel-item .box-item {
     padding-bottom: 90px;
@@ -257,7 +260,7 @@ html {
 
 }
 
-/* giới thiệu 1 chút về cửa hàng */
+/* Phần giới thiệu về cửa hàng */
 #container-info-shop {
     display: flex;
     align-items: center;

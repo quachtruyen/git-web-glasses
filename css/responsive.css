@@ -1,3 +1,11 @@
+@media (max-width: 1220px) and (min-width: 601px) {
+    #navigation .btn-login,
+    #navigation .btn-regiter,
+    #navigation .btn-search {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     /* header và Navigation */
     #header .box-header {
@@ -158,11 +166,8 @@
     }
 
     .box-navMobile {
-        top: 120px;
-        left: 15px;
-        right: 15px;
+        padding: 20px 10px;
     }
-
     .box-contact {
         width: 100%;
         left: 0;

@@ -46,17 +46,16 @@ start();
 
 function On_Off_navMobile() {
     let btnNavMobile = document.querySelector('.box-btn-navMobile');
-    console.log(btnNavMobile)
     let boxNavMobile = document.querySelector('.box-navMobile');
 
     btnNavMobile.addEventListener('click', function() {
         if(btnNavMobile.classList.value === 'box-btn-navMobile') {
             btnNavMobile.classList.add('active-btn-nav');
-            boxNavMobile.style.display = 'block';
+            boxNavMobile.classList.add('active-box-nav');
         }
         else {
             btnNavMobile.classList.remove('active-btn-nav');
-            boxNavMobile.style.display = 'none';
+            boxNavMobile.classList.remove('active-box-nav');
         }
     })
 }
